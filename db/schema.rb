@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140513094950) do
+ActiveRecord::Schema.define(version: 20140513214904) do
 
   create_table "companies", force: true do |t|
     t.string   "name"
@@ -39,9 +39,9 @@ ActiveRecord::Schema.define(version: 20140513094950) do
     t.integer  "project_id"
     t.integer  "user_id"
     t.datetime "datetimeperformed"
-    t.decimal  "hours",             precision: 5, scale: 2
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "hours"
   end
 
 end
