@@ -14,6 +14,10 @@ Tracker::Application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
+  resources :companies
+  resources :projects
+  resources :works
+
   # Example resource route with options:
   #   resources :products do
   #     member do
