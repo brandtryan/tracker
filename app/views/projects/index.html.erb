@@ -2,9 +2,17 @@
 
 <p>Here are all of the projects:</p>
 
-<ul>
-  <% @projects.each do |project| %>
-    <li><%= link_to project.name, project %>
-  <% end %>
-</ul>
-
+<table>
+  <tbody>
+    <tr>
+      <th>Project</th>
+      <th>Company</th>
+    </tr>  
+    <% @projects.each do |project| %>
+      <tr>
+        <td><%= link_to project, project %></td>
+        <td><%= link_to project.company.name, project.company %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
