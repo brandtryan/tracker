@@ -2,8 +2,15 @@
 
 <p>Here are all of the companies:</p>
 
-<ul>
-  <% @companies.each do |company| %>
-    <li><%= link_to company.name, company %>
-  <% end %>
-</ul>
+<table>
+  <tbody>
+    <tr>
+      <th>Company</th>
+    </tr>  
+      <% @companies.each do |company| %>
+      <tr>
+        <td><%= link_to company.name, company %></td>
+      </tr>
+      <% end %>
+  </tbody>
+</table>

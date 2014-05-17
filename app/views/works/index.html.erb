@@ -2,9 +2,21 @@
 
 <p>Here are all of the work items:</p>
 
-<ul>
-  <% @works.each do |work| %>
-    <li><%= link_to work, work %>
-  <% end %>
-</ul>
-
+<table>
+  <tbody>
+    <tr>
+      <th>Date-Time Performed</th>
+      <th>User</th>
+      <th>Project</th>
+      <th>Hours</th>
+    </tr>  
+    <% @works.each do |work_item| %>
+      <tr>
+        <td><%= link_to work_item, work_item %></td>
+        <td><%= link_to work_item.user.fname, work_item.user.fname %></td>
+        <td><%= link_to work_item.project.name, work_item.project.name %></td>
+        <td><%= link_to work_item.hours, work_item %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
