@@ -4,4 +4,19 @@
 <p>Default Rate: <%= @project.default_rate %></p>
 <p>Slug: <%= @project.slug %></p>
 
-<p><%= link_to 'All Projects', projects_path %></p>
+<table>
+  <tbody>
+    <tr>
+      <th>View</th>
+      <th>User</th>
+      <th>Projects</th>
+      <th>Date/Time</th>
+      <th>Hours</th>
+    </tr>  
+    <%= render partial: "works/work_item", collection: @project.works %>  
+  </tbody>
+</table>
+
+<% content_for :aside do %>
+  <% render 'sidebar' %>
+<% end %>
