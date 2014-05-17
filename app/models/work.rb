@@ -25,7 +25,6 @@ class Work < ActiveRecord::Base
   end
 
   def to_s
-    datetimeperformed.strftime('%m/%d/%Y %H:%M')
-    #"#{user}: #{datetimeperformed.strftime('%m/%d/%Y %H:%M')} = #{hours} hours"
+    "#{user}: #{datetimeperformed.strftime('%m/%d/%Y %H:%M')} = #{hours} hours"
   end
 end

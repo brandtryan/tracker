@@ -5,17 +5,19 @@
 <table>
   <tbody>
     <tr>
-      <th>Date-Time Performed</th>
+      <th>View</th>
       <th>User</th>
       <th>Project</th>
+      <th>Date/Time</th>
       <th>Hours</th>
     </tr>  
     <% @works.each do |work_item| %>
       <tr>
-        <td><%= link_to work_item, work_item %></td>
-        <td><%= link_to work_item.user.fname, work_item.user.fname %></td>
-        <td><%= link_to work_item.project.name, work_item.project.name %></td>
-        <td><%= link_to work_item.hours, work_item %></td>
+        <td><%= link_to 'View', work_item %>
+        <td><%= work_item.user %></td>
+        <td><%= work_item.project %></td>
+        <td><%= work_item.datetimeperformed.strftime('%m/%d/%Y %H:%M') %></td>
+        <td><%= work_item.hours %></td>
       </tr>
     <% end %>
   </tbody>
